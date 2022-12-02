@@ -1,7 +1,9 @@
+from pathlib import Path
 
 def main():
     elfList = []
-    with open('C:/Users/Duncan/Repos/AdventOfCode/2022/day01-input.txt','r') as f:
+    path = Path(__file__).parent / "day01-input.txt"
+    with path.open() as f:
         calorieList = []
         for line in f:
             if len(line.strip()) == 0:
